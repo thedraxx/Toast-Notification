@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap');
+
+// colors
+
+$white: rgb(255, 255, 255);
+$black: #00000099;
+$orange: rgba(228, 46, 0, 0.685);
+$purple: rgb(15, 0, 148);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $orange;
+  font-family: 'Smooch Sans', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+
+  .btn {
+    background-color: $white;
+    color: $purple;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.98);
+      -webkit-transform: scale(0.98);
+      -moz-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+      -o-transform: scale(0.98);
+    }
+  }
+
+
+  #toasts {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .toast {
+      background-color: $white;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      padding: 1rem 3rem;
+      margin: 0.5rem;
+
+      &.info{
+        color: $purple;
+      }
+
+      &.success{
+        color: green;
+      }
+
+      &.error{
+        color: red;
+      }
+    }
+  }
+
+}
